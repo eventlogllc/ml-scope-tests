@@ -16,6 +16,14 @@ from unittest.mock import patch
 ### Validating serving infrastructure.
 ### Testing integration between pipeline components.
 
+### Testing API Calls
+### a unit test to generate random input data and run a single step of gradient descent. assert the step to complete without runtime errors.
+
+### Testing for Algorithmic Correctness
+### Train the model for a few iterations and verify that the loss decreases.
+### Train the algorithm without regularization. If the model is complex enough, it will memorize the training data and the training loss will be close to 0.
+### Test specific subcomputations of the algorithm. For example, test that a part of the RNN runs once per element of the input data.
+
 def test(MockPlineFE , MockPlineDE):
      si.nn()
      si.ds()
