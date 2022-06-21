@@ -24,6 +24,12 @@ from unittest.mock import patch
 ### Train the algorithm without regularization. If the model is complex enough, it will memorize the training data and the training loss will be close to 0.
 ### Test specific subcomputations of the algorithm. For example, test that a part of the RNN runs once per element of the input data.
 
+### Integration tests for Pipeline Components
+
+### Validate Model Quality before Serving
+
+### Validate Model-Infra Compatibility before Serving
+
 def test(MockPlineFE , MockPlineDE):
      si.nn()
      si.ds()
