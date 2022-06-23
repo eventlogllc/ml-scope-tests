@@ -11,6 +11,10 @@ from unittest.mock import patch
 
 ### how 
 ### Validating input data.
+    ### [why] low-quality data will significantly affect the model's performance, 
+    ###       tt's much easier to detect low-quality data at input THAN guessing at its existence after the model predicts badly.
+    ### [rules] that the data must satisfy. these rules are the data-schema.
+     
 ### Validating feature engineering.
 ### Validating quality of new model versions.
 ### Validating serving infrastructure.
