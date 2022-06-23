@@ -14,7 +14,13 @@ from unittest.mock import patch
     ### [why] low-quality data will significantly affect the model's performance, 
     ###       it's much easier to detect low-quality data at input THAN guessing at its existence after the model predicts badly.
     ### [how] rules that the data must satisfy. these rules are the data-schema.
-     
+
+### validate data splits are good-quality  
+    ### [why] if the test and training splits are statistically different, then training data will not help predict the test data.
+    ### [hpw] monitor the statistical properties of the splits. If the properties diverge, raise a flag. 
+    ###       further, test that the ratio of examples in each split stays constant. 
+    ###       for example, if the data is split 80:20, that ratio should not change
+    
 ### Validating feature engineering. also called engineered-data
     ### [why] while the raw data might be valid, the model only sees engineered feature data. 
     ###       because engineered data looks very different from raw input data, need to check engineered data separately.
