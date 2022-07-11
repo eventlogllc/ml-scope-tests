@@ -9,10 +9,13 @@ class SI_test(unittest.TestCase):
   def test(MockNN, MockDS):
      si.nn()
      si.ds()
-     assert MockNN is si.nn
-     assert MockDS is si.ds
-     assert MockNN.called
-     assert MockDS.called
+    
+     ### clear the stdout and stderr buffer
+     with redirect_stdout(f) and redirect_stderr(f):
+        assert MockNN is si.nn
+        assert MockDS is si.ds
+        assert MockNN.called
+        assert MockDS.called      
 
 def main():
   suite = unittest.TestSuite()
