@@ -9,9 +9,14 @@ class SI_test(unittest.TestCase):
   def test(MockNN, MockDS):
      si.nn()
      si.ds()
-    
+     
+     out = StringIO.StringIO()
+     err = StringIO.StringIO() 
      ### clear the stdout and stderr buffer
+     out.flush()
+     err.flush()
      with redirect_stdout(f) and redirect_stderr(f):
+        output = out.getvalue()
         assert MockNN is si.nn
         assert MockDS is si.ds
         assert MockNN.called
